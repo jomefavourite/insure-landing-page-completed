@@ -1,0 +1,62 @@
+$colors: (
+  color1: hsl(256, 26%, 20%),
+  color2: hsl(216, 30%, 68%),
+  color3: hsl(270, 9%, 17%),
+  color4: hsl(273, 4%, 51%),
+  color5: hsl(0, 0%, 98%),
+);
+
+@function color($color) {
+  @return map-get($map: $colors, $key: $color);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+body {
+  font-family: "Karla";
+}
+
+h1,
+h2,
+h3 {
+  font-family: "DM Serif Display";
+  line-height: 3rem;
+}
+
+p {
+  color: color(color4);
+  line-height: 1.5;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+%btn {
+  padding: 0.6em 2em;
+  border: 2px solid color(color5);
+  background: none;
+  text-transform: uppercase;
+  color: color(color5);
+  font-family: "Karla";
+  cursor: pointer;
+
+  &:hover {
+    background: color(color5);
+    color: color(color1);
+  }
+}

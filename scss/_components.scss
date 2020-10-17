@@ -1,0 +1,209 @@
+.nav__section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5em 0;
+}
+
+.overhide {
+  overflow: hidden;
+}
+
+.nav__list {
+  display: none;
+  position: absolute;
+  background-color: color(color3);
+  width: 100%;
+  height: calc(100vh - 80px);
+  top: 80px;
+  left: 0;
+  z-index: 1000;
+  font-size: 1.5rem;
+  padding: 4rem 20px;
+  background-image: url("../images/bg-pattern-mobile-nav.svg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+
+  &-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+
+    a {
+      color: color(color5);
+      text-transform: uppercase;
+    }
+
+    & + & {
+      margin-top: 50px;
+    }
+
+    &:hover {
+      border: 1px solid color(color5);
+    }
+  }
+}
+
+.show {
+  display: block;
+}
+
+h1 {
+  color: color(darkGrayishViolet);
+}
+
+.nav__section {
+  > img {
+    height: 100%;
+  }
+}
+
+.ham {
+  cursor: pointer;
+}
+
+.close {
+  display: none;
+  cursor: pointer;
+}
+
+.hero {
+  position: relative;
+  &__img {
+    position: relative;
+    width: 100%;
+    object-fit: cover;
+    // max-height: 500px;
+    height: 500px;
+    display: none;
+
+    &--mobile {
+      width: 100%;
+      object-fit: cover;
+      height: 500px;
+      display: block;
+    }
+  }
+
+  &__content {
+    text-align: center;
+    background: url("../images/bg-pattern-intro-left-mobile.svg"),
+      url("../images/bg-pattern-intro-right-mobile.svg") 100% 300px
+        color(color1);
+    color: color(color5);
+    background-repeat: no-repeat;
+
+    h1 {
+      font-size: clamp(2.8em, 5vw, 4em);
+      font-weight: 700;
+    }
+
+    p {
+      color: color(color5);
+    }
+  }
+}
+
+main {
+  text-align: center;
+  margin: 7em 0;
+}
+
+.main__sec {
+  .dash {
+    display: block;
+    margin: auto;
+    width: 100px;
+    height: 1px;
+    background: color(color2);
+  }
+  h2 {
+    font-size: 2.25rem;
+  }
+}
+
+.grid {
+  &__item {
+    h3 {
+      font-size: 1.5rem;
+    }
+
+    p {
+      max-width: 400px;
+      margin: auto;
+    }
+  }
+  &__item + &__item {
+    margin-top: 2em;
+  }
+}
+
+.work {
+  background: color(color1) url("../images/bg-pattern-how-we-work-mobile.svg")
+    no-repeat 100%;
+  color: color(color5);
+  margin-top: 5em;
+
+  h2 {
+    font-size: 2.25rem;
+    line-height: 2.2rem;
+  }
+}
+
+.footer {
+  padding: 5em 0;
+  background-color: color(color5);
+  background-image: url("../images/bg-pattern-footer-mobile.svg");
+  background-repeat: no-repeat;
+  text-align: center;
+
+  &__hero figure {
+    margin: 2em 0;
+
+    img + img {
+      margin-left: 10px;
+    }
+  }
+
+  &__grid {
+    margin: 2em 0;
+
+    &__item {
+      text-transform: uppercase;
+      h4 {
+        color: color(color4);
+      }
+      nav {
+        margin: 2em 0;
+
+        a {
+          color: color(color3);
+          font-weight: 600;
+
+          &:hover {
+            text-decoration: underline;
+            text-underline-offset: 20%;
+          }
+        }
+
+        li + li {
+          margin-top: 1em;
+        }
+      }
+    }
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+button {
+  @extend %btn;
+}

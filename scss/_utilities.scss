@@ -1,0 +1,28 @@
+$set: (1, 2, 3, 4, 5, 6, 7);
+
+/* Utilitiy Classes*/
+@each $item in $set {
+  .m-#{$item} {
+    margin: #{$item}rem;
+  }
+  .mt-#{$item} {
+    margin-top: #{$item}rem;
+  }
+  .mb-#{$item} {
+    margin-bottom: #{$item}rem;
+  }
+  .my-#{$item} {
+    margin: #{$item}rem 0 #{$item}rem 0;
+  }
+  .p-#{$item} {
+    padding: #{$item}rem;
+  }
+  .px-#{$item} {
+    padding-left: #{$item}rem;
+    padding-right: #{$item}rem;
+  }
+  .py-#{$item} {
+    padding-top: #{$item}rem;
+    padding-bottom: #{$item}rem;
+  }
+}
